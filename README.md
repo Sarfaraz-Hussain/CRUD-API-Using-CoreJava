@@ -1,18 +1,14 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Saving Student List into MySql DB
 
-## Folder Structure
+Here I am saving student list in the mysql database.
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Screenshots
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+![App Screenshot](https://github.com/Sarfaraz-Hussain/Saving-List-Of-Student-Into-MysqlDB/blob/master/Screenshot%20(46).png)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Tech Stack
+**Server:** Java, VSCode    
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
