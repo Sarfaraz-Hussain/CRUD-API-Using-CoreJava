@@ -10,5 +10,5 @@ Here I am saving student list in the mysql database.
 
 
 ## Tech Stack
-**Server:** Java, VSCode    
+Java, VSCode, MySql    
 
