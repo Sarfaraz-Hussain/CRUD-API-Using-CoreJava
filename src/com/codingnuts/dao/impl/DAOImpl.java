@@ -24,7 +24,6 @@ public class DAOImpl implements DAO {
                         student.getEmail(), student.getRollNumber());
                 stmt.executeUpdate(query);
             }
-            System.out.println("insertted");
         } catch (Exception e) {
             e.getMessage();
         } finally {
