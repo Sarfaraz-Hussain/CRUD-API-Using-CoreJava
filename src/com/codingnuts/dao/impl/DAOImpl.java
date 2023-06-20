@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.List;
 
 import com.codingnuts.dao.DAO;
+import com.codingnuts.exception.ConnectionIsNotCreated;
 import com.codingnuts.pojo.Student;
 
 public class DAOImpl implements DAO {
@@ -18,15 +19,20 @@ public class DAOImpl implements DAO {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "tesla");
+            if(con == null)
+                throw new ConnectionIsNotCreated("connection is not hpening");
             stmt = con.createStatement();
             for (Student student : list) {
                 String query = String.format("insert into student values('%s', '%s', '%s')", student.getUserName(),
                         student.getEmail(), student.getRollNumber());
                 stmt.executeUpdate(query);
             }
+        }catch(ConnectionIsNotCreated e) {
+            e.getMessage();
         } catch (Exception e) {
             e.getMessage();
-        } finally {
+        } 
+         finally {
             if (con != null)
                 try {
                     con.close();
